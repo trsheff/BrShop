@@ -1,16 +1,22 @@
 body {
-    min-width: 1122px;
-    min-height: 1750px;
+    min-width: 960px;
     margin: 0;
     padding: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    text-transform: uppercase;
+    color: white;
 }
 
 body {
-    /*background:#000000 url("img/Main-background.jpg")no-repeat 50% 3px;*/
+    background: #000000 url("img/Main-background.jpg") no-repeat center top;
 }
 
 .main-header {
-    border: 3px solid green;
+    color: #ffffff;
+    background-color: #000000;
     margin-bottom: 60px;
 }
 
@@ -30,16 +36,71 @@ body {
 
 .main-navigation {
     float: left;
-    border: 3px solid red;
     width: 780px;
-    min-height: 70px;
+}
+
+.main-navigation a {
+    display: block;
+    padding: 25px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.main-navigation li {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.main-navigation a:hover {
+    background-color: #575757;
 }
 
 .user-block {
     float: right;
-    border: 3px solid yellow;
-    width: 140px;
-    min-height: 70px;
+    /*border: 3px solid yellow;*/
+    max-width: 140px;
+}
+
+.user-block li {
+    list-style: none;
+}
+
+.login {
+    position: relative;
+    display: inline-block;
+    padding:25px 20px;
+    padding-left: 50px;
+    
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    text-decoration: none;
+}
+.login::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left:20px;
+    top:27px;
+    background: url("img/icon-login1.png") no-repeat;
+    opacity: 0.3;
+}
+
+.login:hover::before{
+    opacity: 1;
+}
+.login:hover{
+    background-color: #575757;
 }
 
 .index-logo {
