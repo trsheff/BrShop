@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    border: 3px solid #6289ff;
+    /*border: 3px solid #6289ff;*/
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
@@ -61,7 +61,7 @@ body {
 }
 
 .main-navigation a:hover {
-    background-color: #575757;
+    background-color: #2a2a2a;
 }
 
 .user-block {
@@ -77,51 +77,85 @@ body {
 .login {
     position: relative;
     display: inline-block;
-    padding:25px 20px;
+    padding: 25px 20px;
     padding-left: 50px;
-    
+
     font-size: 16px;
     line-height: 20px;
     color: white;
     text-decoration: none;
 }
-.login::before{
+
+.login::before {
     content: "";
     position: absolute;
     width: 18px;
     height: 18px;
-    left:20px;
-    top:27px;
+    left: 20px;
+    top: 27px;
     background: url("img/icon-login1.png") no-repeat;
     opacity: 0.3;
 }
 
-.login:hover::before{
+.login:hover::before {
     opacity: 1;
 }
-.login:hover{
-    background-color: #575757;
+
+.login:hover {
+    background-color: #2a2a2a;
 }
 
 .index-logo {
     width: 368px;
     height: 204px;
-    border: 3px solid yellow;
+
     margin: 0 auto;
     margin-bottom: 25px;
 }
 
+.index-logo img {
+    width: 368px;
+    height: 204px;
+}
+
 .features {
-    background-color: #f8ff1c;
-    margin-bottom: 60px;
+
+    margin-bottom: 80px;
 }
 
 .features-item {
     float: left;
     width: 300px;
     min-height: 175px;
-    background-color: #52ff3d;
     margin-right: 20px;
+    text-align: center;
+}
+
+.features-name {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    padding-bottom: 35px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.features-name::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    bottom: 0px;
+    margin-left: -10px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+.features-item p {
+    margin: 10px;
+    margin-bottom: 0;
 }
 
 .features-item:last-child {
@@ -129,31 +163,169 @@ body {
 }
 
 .index-content {
-    border: 3px solid #d356ff;
+
     margin-bottom: 35px;
     padding: 50px 80px;
+    background: url("img/vertical_midle_line.png") no-repeat center, #ffffff url("img/bgIndex-content.png");
+    color: black;
+    text-align: left;
+}
+
+.index-content p {
+    margin: 0;
+    margin-bottom: 25px;
 }
 
 .index-content-left {
     float: left;
     width: 380px;
-    border: 2px dotted #7ba5ff;
+    /*border: 2px dotted #7ba5ff;*/
     min-height: 330px;
+}
+
+.news-preview {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 35px;
+}
+
+.news-preview p {
+    margin-bottom: 0;
+}
+
+.news-preview li {
+    margin-bottom: 25px;
+}
+
+.index-content-title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 42px;
+
+}
+
+time {
+
+    font-style: italic;
+    text-transform: none;
+    font-weight: normal;
 }
 
 .index-content-right {
     float: right;
     width: 300px;
-    border: 2px dotted #7ba5ff;
     min-height: 330px;
+    position: relative;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 33px;
+
+    vertical-align: top;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 25px;
+    padding: 10px 30px;
+    margin-right: 10px;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+    background-color: #000000;
+}
+
+.gallery-content {
+    height: 164px;
+    margin: 0;
+
+    background-color: #cccccc;
+    border: 7px solid #ffffff;
+}
+
+.gallery-content img {
+    width: 286px;
+    height: 164px;
+}
+
+.gallery .btn {
+    position: absolute;
+    bottom: 0;
+
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-prev {
+    left: 0;
+}
+
+.gallery-next {
+    right: 0;
+}
+
+.appointment-form input{
+    float: left;
+    width: 106px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    padding: 7px 15px;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+
+    background-color: #f9f6f3;
+    border: 2px solid #000000;
+    outline: none;
+}
+
+.appointment-form input:nth-child(2n){
+    margin-right: 0;
+}
+
+.appointment-form .btn{
+    clear: both;
+    width: 100%;
+}
+
+.appointment-form input:focus{
+    border: 2px solid #663d15;
 }
 
 .main-footer {
-    border: 3px solid #ff4bb3;
+
 
     margin-top: 65px;
     padding-top: 60px;
     padding-bottom: 40px;
+    color: #ffffff;
+    background: #252525;
 }
 
 .footer-contacts {
@@ -162,20 +334,68 @@ body {
     width: 320px;
     margin-right: 60px;
     min-height: 90px;
-    border: 1px double #80ff82;
 }
 
+.footer-contacts a{
+    color: white;
+}
+
+.footer-contacts a:hover{
+    text-decoration: none;
+}
 .footer-social {
     float: left;
     width: 180px;
     min-height: 90px;
-    border: 1px double #6cd76c;
+    text-align: center;
 }
-
+.footer-social p,
+.footer-copyright p{
+    margin-top: 0;
+}
 .footer-copyright {
-
+    text-align: center;
     float: right;
     width: 180px;
     min-height: 90px;
-    border: 1px double #6cd76c;
+
+}
+
+.social-btn{
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;
+    font-size: 0;
+    vertical-align: top;
+    text-decoration: none;
+    background: #000 url(img/icon-social.png)no-repeat center;
+}
+
+.social-btn-vk{
+    background-position: 0px;
+}
+.social-btn-fb{
+    background-position: -48px;
+}
+.social-btn-inst{
+    background-position: -98px;
+}
+
+.social-btn-vk:hover{
+    background: url("img/icon-social1.png")no-repeat center;
+    background-position: 0px;
+}
+.social-btn-fb:hover{
+    background: url("img/icon-social1.png")no-repeat center;
+    background-position: -48px;
+}
+.social-btn-inst:hover{
+    background: url("img/icon-social1.png")no-repeat center;
+    background-position: -98px;
+}
+
+.footer-copyright .btn{
+    margin: 0;
+    margin-right: 0;
 }
